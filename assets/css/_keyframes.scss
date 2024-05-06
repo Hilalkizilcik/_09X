@@ -1,0 +1,36 @@
+@keyframes side-effect-left {
+  from {
+    right: 0;
+  }
+  to {
+    right: 1700px;
+    display: none;
+  }
+}
+
+@keyframes side-effect-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 1700px;
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

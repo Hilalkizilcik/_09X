@@ -1,0 +1,48 @@
+@import "./keyframes";
+@import "./mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Saira Stencil One", sans-serif;
+  overflow-x: hidden;
+}
+
+.app-logo {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+  &:hover {
+    filter: drop-shadow(15px 0px 5px #000);
+    transition: 500ms all;
+  }
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}

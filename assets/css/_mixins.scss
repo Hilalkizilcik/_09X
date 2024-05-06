@@ -1,0 +1,33 @@
+@mixin section-content {
+  max-width: 413px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  .head-title {
+    text-align: center;
+    font-size: 90px;
+  }
+  .icon {
+    width: 80px;
+    height: auto;
+  }
+}
+@mixin animation($direction, $timeStart, $timeEnd) {
+  @if $direction == "left" {
+    animation: side-effect-left linear;
+    animation-timeline: view($timeStart $timeEnd);
+  } @else if $direction == "right" {
+    animation: side-effect-right linear;
+    animation-timeline: view($timeStart $timeEnd);
+  }
+}
+@mixin lineTextAnimation($timeStart, $timeEnd) {
+  animation: fadeIn linear forwards;
+  animation-timeline: view();
+  @if $timeEnd {
+    animation-range: $timeStart $timeEnd;
+  } @else {
+    animation-range: $timeStart;
+  }
+}

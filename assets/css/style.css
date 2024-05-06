@@ -1,0 +1,335 @@
+@keyframes side-effect-left {
+  from {
+    right: 0;
+  }
+  to {
+    right: 1700px;
+    display: none;
+  }
+}
+@keyframes side-effect-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 1700px;
+    display: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Saira Stencil One", sans-serif;
+  overflow-x: hidden;
+}
+
+.app-logo {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.app-logo:hover {
+  filter: drop-shadow(15px 0px 5px #000);
+  transition: 500ms all;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
+section {
+  margin: 0 20px;
+}
+section.header {
+  position: relative;
+  padding: 2px;
+  margin-top: 20px;
+}
+section.header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 25%);
+          clip-path: polygon(10% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 25%);
+  background-color: black;
+}
+section.header .content {
+  height: 880px;
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 25%);
+          clip-path: polygon(10% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 25%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  background: white;
+  position: relative;
+  padding-top: 100px;
+}
+section.header .content nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+section.header .content nav a {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+section.header .content .right-side {
+  max-width: 413px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  gap: 40px;
+}
+section.header .content .right-side .head-title {
+  text-align: center;
+  font-size: 90px;
+}
+section.header .content .right-side .icon {
+  width: 80px;
+  height: auto;
+}
+section.header .content .gun {
+  border-radius: 15px;
+  width: 420px;
+}
+section.header .content .gun:hover {
+  box-shadow: 0 0 15px #000000;
+  scale: 1.02;
+  transition: 500ms all;
+}
+section.header .content .header-image {
+  width: 570px;
+  filter: drop-shadow(15px 5px 5px #000);
+}
+
+.content-2 {
+  height: 880px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  background: white;
+  position: relative;
+  border: 2px solid black;
+  border-top: 0;
+}
+.content-2 .left-side {
+  max-width: 413px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  gap: 40px;
+}
+.content-2 .left-side .head-title {
+  text-align: center;
+  font-size: 90px;
+}
+.content-2 .left-side .icon {
+  width: 80px;
+  height: auto;
+}
+.content-2 .icon {
+  width: 80px;
+}
+.content-2 .sword-img {
+  border-radius: 5px;
+  width: 420px;
+}
+.content-2 .sword-img:hover {
+  box-shadow: 0 0 15px #000000;
+  scale: 1.02;
+  transition: 500ms all;
+}
+.content-2 .knife-img {
+  border-radius: 15px;
+  width: 320px;
+}
+.content-2 .knife-img:hover {
+  box-shadow: 0 0 15px #000000;
+  scale: 1.02;
+  transition: 500ms all;
+}
+.content-2 .cyborg {
+  width: 600px;
+  filter: drop-shadow(15px 0px 5px #000) grayscale(80%);
+}
+
+.content-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.content-3 .text {
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+}
+.content-3 .left-side {
+  position: relative;
+}
+.content-3 .left-side .left-line {
+  position: relative;
+}
+.content-3 .left-side .left-line.one {
+  top: -200px;
+  right: 20px;
+}
+.content-3 .left-side .left-line.one .text {
+  top: -70px;
+  left: -50px;
+}
+.content-3 .left-side .left-line.two {
+  left: 60px;
+}
+.content-3 .left-side .left-line.two .text {
+  bottom: -70px;
+  left: -60px;
+}
+.content-3 .left-side .left-line::after {
+  content: "";
+  width: 200%;
+  height: 200%;
+  background: white;
+  box-shadow: 0 0 20px 0 white;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  animation: side-effect-left linear;
+  animation-timeline: view(100px 200px);
+}
+.content-3 .left-side .left-line:nth-child(1)::after {
+  top: -70px !important;
+}
+.content-3 .mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-3 .mid .hearth-img {
+  width: 400px;
+  filter: grayscale(70%);
+  position: relative;
+  z-index: 10;
+}
+.content-3 .mid .hearthbeat {
+  width: 200px;
+}
+.content-3 .right-side {
+  position: relative;
+}
+.content-3 .right-side .right-line {
+  position: relative;
+}
+.content-3 .right-side .right-line.one {
+  top: -80px;
+  left: 15px;
+}
+.content-3 .right-side .right-line.one .text {
+  top: -70px;
+  right: 20px;
+}
+.content-3 .right-side .right-line.two {
+  top: 50px;
+  left: 20px;
+}
+.content-3 .right-side .right-line.two .text {
+  bottom: 0px;
+  right: -50px;
+}
+.content-3 .right-side .right-line::after {
+  content: "";
+  width: 200%;
+  height: 200%;
+  background: white;
+  box-shadow: 0 0 20px 0 white;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  animation: side-effect-right linear;
+  animation-timeline: view(100px 200px);
+}
+.content-3 .right-side .right-line:nth-child(1)::after {
+  top: -200px !important;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .social-m {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+footer .social-m a {
+  cursor: pointer;
+}
+footer .social-m a:nth-child(2) img {
+  width: 27px;
+  height: 27px;
+}
+footer .social-m a img {
+  width: 30px;
+  height: 30px;
+}
+footer .social-m a img:hover {
+  scale: 1.1;
+  transition: 400ms;
+}/*# sourceMappingURL=style.css.map */
